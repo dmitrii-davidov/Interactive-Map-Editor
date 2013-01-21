@@ -60,11 +60,18 @@
 - (void)initPoints
 {
     graphPoints = [NSMutableArray arrayWithObjects:
-                   [NSValue valueWithPoint:NSMakePoint(100, 100)],
-                   [NSValue valueWithPoint:NSMakePoint(200, 120)],
-                   [NSValue valueWithPoint:NSMakePoint(300, 150)],
-//                   [NSValue valueWithPoint:NSMakePoint(400, 100)],
-                   [NSValue valueWithPoint:NSMakePoint(500, 80)], nil];
+//                   [NSValue valueWithPoint:NSMakePoint(289,124)],
+//                   [NSValue valueWithPoint:NSMakePoint(247,209)],
+                   [NSValue valueWithPoint:NSMakePoint(306,239)],
+                   [NSValue valueWithPoint:NSMakePoint(305,227)],
+                   [NSValue valueWithPoint:NSMakePoint(307,217)],
+                   [NSValue valueWithPoint:NSMakePoint(313,207)],
+                   [NSValue valueWithPoint:NSMakePoint(321,199)],
+                   [NSValue valueWithPoint:NSMakePoint(329,194)],
+                   [NSValue valueWithPoint:NSMakePoint(341,191)],
+//                   [NSValue valueWithPoint:NSMakePoint(341,155)],
+//                   [NSValue valueWithPoint:NSMakePoint(289,124)],
+                   nil];
     controlPoints = [NSMutableArray arrayWithObjects:[NSValue valueWithPoint:NSMakePoint(20, 20)], nil];
     [self recalculateControlPoints];
 }
