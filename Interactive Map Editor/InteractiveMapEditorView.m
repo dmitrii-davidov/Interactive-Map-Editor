@@ -32,9 +32,13 @@
     NSBezierPath *graphPath = [[NSBezierPath alloc] init];
     [graphPath moveToPoint:[(NSValue *)[graphPoints objectAtIndex:0] pointValue]];
     for (NSUInteger i = 0; i < [graphPoints count] - 1; ++i) {
+        NSArray *cubicControlPoints = [InteractiveMapEditorView getCubicControlPointsToPoint:[(NSValue *)[graphPoints objectAtIndex:i] pointValue]
+                                                                                controlPoint:[(NSValue *)[controlPoints objectAtIndex:i / 2] pointValue]
+                                                                                       point:[(NSValue *)[graphPoints objectAtIndex:i + 1] pointValue]];
+
         [graphPath curveToPoint:[(NSValue *)[graphPoints objectAtIndex:i + 1] pointValue]
-            controlPoint1:[(NSValue *)[controlPoints objectAtIndex:2 * i] pointValue]
-            controlPoint2:[(NSValue *)[controlPoints objectAtIndex:2 * i + 1] pointValue]];
+            controlPoint1:[(NSValue *)[cubicControlPoints objectAtIndex:0] pointValue]
+            controlPoint2:[(NSValue *)[cubicControlPoints objectAtIndex:1] pointValue]];
     }
     [[NSColor blueColor] set];
     [graphPath setLineWidth:3.0f];
@@ -42,8 +46,9 @@
 
     NSBezierPath *controlPath = [[NSBezierPath alloc] init];
     for (NSUInteger i = 0; i < [controlPoints count]; ++i) {
-        [controlPath moveToPoint:[(NSValue *)[graphPoints objectAtIndex:(i / 2 + i % 2)] pointValue]];
+        [controlPath moveToPoint:[(NSValue *)[graphPoints objectAtIndex:i] pointValue]];
         [controlPath lineToPoint:[(NSValue *)[controlPoints objectAtIndex:i] pointValue]];
+        [controlPath lineToPoint:[(NSValue *)[graphPoints objectAtIndex:i + 1] pointValue]];
     }
     [[NSColor redColor] set];
     [controlPath setLineWidth:1.0f];
@@ -56,8 +61,7 @@
 {
     graphPoints = [NSMutableArray arrayWithObjects:[NSValue valueWithPoint:NSMakePoint(10, 100)],
               [NSValue valueWithPoint:NSMakePoint(400, 100)], nil];
-    controlPoints = [NSMutableArray arrayWithObjects:[NSValue valueWithPoint:NSMakePoint(20, 20)],
-                     [NSValue valueWithPoint:NSMakePoint(35, 25)], nil];
+    controlPoints = [NSMutableArray arrayWithObjects:[NSValue valueWithPoint:NSMakePoint(20, 20)], nil];
 }
 
 #pragma mark - Mouse events
@@ -94,6 +98,15 @@
         }
     }
     return -1;
+}
+
++(NSArray *)getCubicControlPointsToPoint:(NSPoint)p0 controlPoint:(NSPoint)p1 point:(NSPoint)p2
+{
+    CGFloat x1 = p0.x + 2 * (p1.x - p0.x) / 3;
+    CGFloat y1 = p0.y + 2 * (p1.y - p0.y) / 3;
+    CGFloat x2 = p1.x + (p2.x - p1.x) / 3;
+    CGFloat y2 = p1.y + (p2.y - p1.y) / 3;
+    return [NSArray arrayWithObjects:[NSValue valueWithPoint:NSMakePoint(x1, y1)], [NSValue valueWithPoint:NSMakePoint(x2, y2)], nil];
 }
 
 @end
