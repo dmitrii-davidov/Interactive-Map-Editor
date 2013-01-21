@@ -87,10 +87,10 @@
 			children = (
 				0AB3B6D016AD94CC00E88EE5 /* AppDelegate.h */,
 				0AB3B6D116AD94CC00E88EE5 /* AppDelegate.m */,
-				0AB3B6D316AD94CC00E88EE5 /* MainMenu.xib */,
-				0AB3B6C516AD94CC00E88EE5 /* Supporting Files */,
 				0AB3B6DB16AD957300E88EE5 /* InteractiveMapEditorView.h */,
 				0AB3B6DC16AD957300E88EE5 /* InteractiveMapEditorView.m */,
+				0AB3B6D316AD94CC00E88EE5 /* MainMenu.xib */,
+				0AB3B6C516AD94CC00E88EE5 /* Supporting Files */,
 			);
 			path = "Interactive Map Editor";
 			sourceTree = "<group>";
