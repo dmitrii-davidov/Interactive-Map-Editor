@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Interactive Map Editor' target in the 'Interactive Map Editor' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

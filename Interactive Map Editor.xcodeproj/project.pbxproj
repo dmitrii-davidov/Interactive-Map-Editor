@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AB3B6BF16AD94CC00E88EE5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB3B6BE16AD94CC00E88EE5 /* Cocoa.framework */; };
+		0AB3B6C916AD94CC00E88EE5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3B6C716AD94CC00E88EE5 /* InfoPlist.strings */; };
+		0AB3B6CB16AD94CC00E88EE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB3B6CA16AD94CC00E88EE5 /* main.m */; };
+		0AB3B6CF16AD94CC00E88EE5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3B6CD16AD94CC00E88EE5 /* Credits.rtf */; };
+		0AB3B6D216AD94CC00E88EE5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB3B6D116AD94CC00E88EE5 /* AppDelegate.m */; };
+		0AB3B6D516AD94CC00E88EE5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3B6D316AD94CC00E88EE5 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0AB3B6BA16AD94CC00E88EE5 /* Interactive Map Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Interactive Map Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AB3B6BE16AD94CC00E88EE5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0AB3B6C116AD94CC00E88EE5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0AB3B6C216AD94CC00E88EE5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0AB3B6C316AD94CC00E88EE5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0AB3B6C616AD94CC00E88EE5 /* Interactive Map Editor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Interactive Map Editor-Info.plist"; sourceTree = "<group>"; };
+		0AB3B6C816AD94CC00E88EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0AB3B6CA16AD94CC00E88EE5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0AB3B6CC16AD94CC00E88EE5 /* Interactive Map Editor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Interactive Map Editor-Prefix.pch"; sourceTree = "<group>"; };
+		0AB3B6CE16AD94CC00E88EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		0AB3B6D016AD94CC00E88EE5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0AB3B6D116AD94CC00E88EE5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0AB3B6D416AD94CC00E88EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AB3B6B716AD94CC00E88EE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AB3B6BF16AD94CC00E88EE5 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AB3B6AF16AD94CC00E88EE5 = {
+			isa = PBXGroup;
+			children = (
+				0AB3B6C416AD94CC00E88EE5 /* Interactive Map Editor */,
+				0AB3B6BD16AD94CC00E88EE5 /* Frameworks */,
+				0AB3B6BB16AD94CC00E88EE5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0AB3B6BB16AD94CC00E88EE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AB3B6BA16AD94CC00E88EE5 /* Interactive Map Editor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AB3B6BD16AD94CC00E88EE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AB3B6BE16AD94CC00E88EE5 /* Cocoa.framework */,
+				0AB3B6C016AD94CC00E88EE5 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0AB3B6C016AD94CC00E88EE5 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AB3B6C116AD94CC00E88EE5 /* AppKit.framework */,
+				0AB3B6C216AD94CC00E88EE5 /* CoreData.framework */,
+				0AB3B6C316AD94CC00E88EE5 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		0AB3B6C416AD94CC00E88EE5 /* Interactive Map Editor */ = {
+			isa = PBXGroup;
+			children = (
+				0AB3B6D016AD94CC00E88EE5 /* AppDelegate.h */,
+				0AB3B6D116AD94CC00E88EE5 /* AppDelegate.m */,
+				0AB3B6D316AD94CC00E88EE5 /* MainMenu.xib */,
+				0AB3B6C516AD94CC00E88EE5 /* Supporting Files */,
+			);
+			path = "Interactive Map Editor";
+			sourceTree = "<group>";
+		};
+		0AB3B6C516AD94CC00E88EE5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AB3B6C616AD94CC00E88EE5 /* Interactive Map Editor-Info.plist */,
+				0AB3B6C716AD94CC00E88EE5 /* InfoPlist.strings */,
+				0AB3B6CA16AD94CC00E88EE5 /* main.m */,
+				0AB3B6CC16AD94CC00E88EE5 /* Interactive Map Editor-Prefix.pch */,
+				0AB3B6CD16AD94CC00E88EE5 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0AB3B6B916AD94CC00E88EE5 /* Interactive Map Editor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AB3B6D816AD94CC00E88EE5 /* Build configuration list for PBXNativeTarget "Interactive Map Editor" */;
+			buildPhases = (
+				0AB3B6B616AD94CC00E88EE5 /* Sources */,
+				0AB3B6B716AD94CC00E88EE5 /* Frameworks */,
+				0AB3B6B816AD94CC00E88EE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Interactive Map Editor";
+			productName = "Interactive Map Editor";
+			productReference = 0AB3B6BA16AD94CC00E88EE5 /* Interactive Map Editor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AB3B6B116AD94CC00E88EE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Dmitry Davidov";
+			};
+			buildConfigurationList = 0AB3B6B416AD94CC00E88EE5 /* Build configuration list for PBXProject "Interactive Map Editor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0AB3B6AF16AD94CC00E88EE5;
+			productRefGroup = 0AB3B6BB16AD94CC00E88EE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AB3B6B916AD94CC00E88EE5 /* Interactive Map Editor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AB3B6B816AD94CC00E88EE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AB3B6C916AD94CC00E88EE5 /* InfoPlist.strings in Resources */,
+				0AB3B6CF16AD94CC00E88EE5 /* Credits.rtf in Resources */,
+				0AB3B6D516AD94CC00E88EE5 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AB3B6B616AD94CC00E88EE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AB3B6CB16AD94CC00E88EE5 /* main.m in Sources */,
+				0AB3B6D216AD94CC00E88EE5 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0AB3B6C716AD94CC00E88EE5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AB3B6C816AD94CC00E88EE5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0AB3B6CD16AD94CC00E88EE5 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AB3B6CE16AD94CC00E88EE5 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		0AB3B6D316AD94CC00E88EE5 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AB3B6D416AD94CC00E88EE5 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0AB3B6D616AD94CC00E88EE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0AB3B6D716AD94CC00E88EE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0AB3B6D916AD94CC00E88EE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Interactive Map Editor/Interactive Map Editor-Prefix.pch";
+				INFOPLIST_FILE = "Interactive Map Editor/Interactive Map Editor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0AB3B6DA16AD94CC00E88EE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Interactive Map Editor/Interactive Map Editor-Prefix.pch";
+				INFOPLIST_FILE = "Interactive Map Editor/Interactive Map Editor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AB3B6B416AD94CC00E88EE5 /* Build configuration list for PBXProject "Interactive Map Editor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AB3B6D616AD94CC00E88EE5 /* Debug */,
+				0AB3B6D716AD94CC00E88EE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AB3B6D816AD94CC00E88EE5 /* Build configuration list for PBXNativeTarget "Interactive Map Editor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AB3B6D916AD94CC00E88EE5 /* Debug */,
+				0AB3B6DA16AD94CC00E88EE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AB3B6B116AD94CC00E88EE5 /* Project object */;
+}
