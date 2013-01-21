@@ -33,7 +33,7 @@
     [graphPath moveToPoint:[(NSValue *)[graphPoints objectAtIndex:0] pointValue]];
     for (NSUInteger i = 0; i < [graphPoints count] - 1; ++i) {
         NSArray *cubicControlPoints = [InteractiveMapEditorView getCubicControlPointsToPoint:[(NSValue *)[graphPoints objectAtIndex:i] pointValue]
-                                                                                controlPoint:[(NSValue *)[controlPoints objectAtIndex:i / 2] pointValue]
+                                                                                controlPoint:[(NSValue *)[controlPoints objectAtIndex:i] pointValue]
                                                                                        point:[(NSValue *)[graphPoints objectAtIndex:i + 1] pointValue]];
 
         [graphPath curveToPoint:[(NSValue *)[graphPoints objectAtIndex:i + 1] pointValue]
@@ -59,9 +59,23 @@
 
 - (void)initPoints
 {
-    graphPoints = [NSMutableArray arrayWithObjects:[NSValue valueWithPoint:NSMakePoint(10, 100)],
-              [NSValue valueWithPoint:NSMakePoint(400, 100)], nil];
+    graphPoints = [NSMutableArray arrayWithObjects:
+                   [NSValue valueWithPoint:NSMakePoint(100, 100)],
+                   [NSValue valueWithPoint:NSMakePoint(200, 120)],
+                   [NSValue valueWithPoint:NSMakePoint(300, 150)],
+//                   [NSValue valueWithPoint:NSMakePoint(400, 100)],
+                   [NSValue valueWithPoint:NSMakePoint(500, 80)], nil];
     controlPoints = [NSMutableArray arrayWithObjects:[NSValue valueWithPoint:NSMakePoint(20, 20)], nil];
+    [self recalculateControlPoints];
+}
+
+- (void)recalculateControlPoints
+{
+    for (NSUInteger i = 1; i < [graphPoints count] - 1; ++i) {
+        CGPoint p = [(NSValue *)[graphPoints objectAtIndex:i] pointValue];
+        CGPoint cp = [(NSValue *)[controlPoints objectAtIndex:i - 1] pointValue];
+        [controlPoints setObject:[NSValue valueWithPoint:NSMakePoint(2 * p.x - cp.x, 2 * p.y - cp.y)] atIndexedSubscript:i];
+    }
 }
 
 #pragma mark - Mouse events
@@ -77,6 +91,9 @@
     if (draggedControlPointIndex != -1) {
         NSPoint currentPoint = [self convertPoint:[theEvent locationInWindow] fromView:nil];
         [controlPoints setObject:[NSValue valueWithPoint:currentPoint] atIndexedSubscript:draggedControlPointIndex];
+        if (draggedControlPointIndex == 0) {
+            [self recalculateControlPoints];
+        }
         [self setNeedsDisplay:YES];
     }
 }
